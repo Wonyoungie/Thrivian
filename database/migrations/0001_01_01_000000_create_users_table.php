@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('avatar')->default('/storage/avatar/default_avatar.png');
             $table->text('bio')->default('Hi There!');
             $table->boolean('role')->default(false);
-            $table->boolean('otp')->default(false);
+            $table->boolean('is_active')->default(false);
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');

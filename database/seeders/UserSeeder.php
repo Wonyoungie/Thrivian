@@ -10,30 +10,32 @@ class UserSeeder extends Seeder
 {
     public function run()
     {
-        // Tambahkan data admin
+        // Tambahkan data rizal
         User::create([
-            'name' => 'Admin',
+            'name' => 'admin',
             'username' => 'admin',
-            'email' => 'admin@example.com',
-            'password' => Hash::make('password'),
+            'email' => 'admin@gmail.com',
+            'password' => Hash::make('admin'),
             'role' => true,
+            'is_active' => true,
         ]);
 
         // Tambahkan data pengguna biasa
         User::create([
-            'name' => 'John Doe',
-            'username' => 'johndoe',
-            'email' => 'johndoe@example.com',
-            'password' => Hash::make('password'),
+            'name' => 'user1',
+            'username' => 'user1',
+            'email' => 'user1@gmail.com',
+            'password' => Hash::make('user1'),
             'role' => false,
+            'is_active' => true,
         ]);
 
         // Tambahkan data pengguna tambahan
         User::create([
-            'name' => 'Jane Doe',
-            'username' => 'janedoe',
-            'email' => 'janedoe@example.com',
-            'password' => Hash::make('password'),
+            'name' => 'user2',
+            'username' => 'user2',
+            'email' => 'user2@gmail.com',
+            'password' => Hash::make('user2'),
             'role' => false,
         ]);
 
