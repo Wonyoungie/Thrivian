@@ -59,12 +59,12 @@ Route::middleware(['guest'])->group(function () {
 
 
 
-// // halaman apa saja yang bisa diakses user jika dia belum login
-// Route::get('/', function () {
+// halaman apa saja yang bisa diakses user jika dia belum login
+Route::get('/', function () {
 
-//     return redirect(route('home'));
+    return redirect(route('login'));
 
-// });
+});
 
 // Route::get('/home', function () {
 

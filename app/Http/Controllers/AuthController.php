@@ -113,9 +113,13 @@ class AuthController extends Controller
         if (!$user) {
             // Buat pengguna baru jika tidak ditemukan
             $user = new User();
-            $user->name = $googleUser->name;
+            $googleName = $googleUser->name;
+
+
+            $user->name = $googleName;
+            $user->username = $googleName . '.google';
             $user->email = $googleUser->email;
-            $user->photo_profile = $googleUser->avatar;
+            $user->avatar = $googleUser->avatar;
             $user->password = bcrypt('random_password');
             $user->save();
         }
